@@ -1,10 +1,6 @@
 const formatString = (input: string, toUpper?: boolean): string =>
   toUpper === false ? input.toLowerCase() : input.toUpperCase();
 
-// console.log(formatString("hello"));
-// console.log(formatString("Hello", true));
-// console.log(formatString("Hello", false));
-
 function filterByRating(
   items: { title: string; rating: number }[],
   minRating: number = 4
@@ -20,14 +16,6 @@ function filterByRating(
   return filteredItems;
 }
 
-const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 5.0 },
-];
-
-// console.log(filterByRating(books));
-
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
   for (const array of arrays) {
@@ -35,9 +23,6 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   }
   return result;
 }
-
-// console.log(concatenateArrays(["a", "b"], ["c"]));
-// console.log(concatenateArrays([1, 2], [3, 4], [5]));
 
 class Vehicle {
   private make: string;
@@ -66,17 +51,9 @@ class Car extends Vehicle {
   }
 }
 
-const myCar = new Car("Toyota", 2020, "Corolla");
-
-// console.log(myCar.getInfo());
-// console.log(myCar.getModel());
-
 function processValue(value: string | number): number {
   return typeof value === "string" ? value.length : value * 2;
 }
-
-// console.log(processValue("hello"));
-// console.log(processValue(10));
 
 interface Product {
   name: string;
@@ -99,14 +76,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   return mostExpensive;
 }
 
-const products = [
-  { name: "Bag", price: 50 },
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-];
-
-// console.log(getMostExpensiveProduct(products));
-
 enum Day {
   Monday,
   Tuesday,
@@ -125,9 +94,6 @@ function getDayType(day: Day): string {
   }
 }
 
-//   console.log(getDayType(Day.Monday));
-//   console.log(getDayType(Day.Sunday));
-
 async function squareAsync(n: number): Promise<number> {
   if (n < 0) {
     return Promise.reject("Error: Negative number not allowed");
@@ -139,6 +105,3 @@ async function squareAsync(n: number): Promise<number> {
     }, 1000);
   });
 }
-
-// squareAsync(4).then(console.log);
-// squareAsync(-3).catch(console.error);
