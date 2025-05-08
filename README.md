@@ -16,7 +16,7 @@ if we want to extend any property we can do this
 now we can use both
 
 `const user1 : User1 ={
-    name: '44445445455444545abce',
+    name: 'abcd',
     age: 25,
 };`
 
@@ -52,7 +52,7 @@ if we want to extend any property then we can do this two way.
 now if we declared a variable and use User2 then its merged it automatically
 
 `const use2:User2 ={
-    name ="abdc",
+    name ="abcd",
     age: 25,
     email: "email@email.com"
 }`

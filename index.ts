@@ -1,5 +1,5 @@
 const formatString = (input: string, toUpper?: boolean): string =>
-  toUpper === false ? input.toLowerCase() : input.toUpperCase()
+  toUpper === false ? input.toLowerCase() : input.toUpperCase();
 
 // console.log(formatString("hello"));
 // console.log(formatString("Hello", true));
@@ -26,9 +26,7 @@ const books = [
   { title: "Book C", rating: 5.0 },
 ];
 
-
-
-  // console.log(filterByRating(books));
+// console.log(filterByRating(books));
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
@@ -48,7 +46,6 @@ class Vehicle {
   constructor(make: string, year: number) {
     this.make = make;
     this.year = year;
-    
   }
 
   public getInfo(): string {
@@ -75,15 +72,7 @@ const myCar = new Car("Toyota", 2020, "Corolla");
 // console.log(myCar.getModel());
 
 function processValue(value: string | number): number {
-  let result: number;
-
-  if (typeof value === "string") {
-    result = value.length;
-  } else {
-    result = value * 2;
-  }
-
-  return result;
+  return typeof value === "string" ? value.length : value * 2;
 }
 
 // console.log(processValue("hello"));
@@ -109,7 +98,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
 
   return mostExpensive;
 }
-
 
 const products = [
   { name: "Bag", price: 50 },
